@@ -3,9 +3,9 @@
 namespace ecosnail::tempo {
 
 FrameTimer::FrameTimer(int fps)
-    : _lastFrame(0)
+    : _delta(1.0 / fps)
+    , _lastFrame(0)
     , _startTime(Clock::now())
-    , _delta(1.0 / fps)
     , _frameDuration(std::chrono::duration_cast<Clock::duration>(
         std::chrono::duration<double>(_delta)))
 { }
@@ -15,7 +15,7 @@ double FrameTimer::delta() const
     return _delta;
 }
 
-int FrameTimer::framesPassed()
+int FrameTimer::operator()()
 {
     auto currentTime = Clock::now();
     auto currentFrame = (currentTime - _startTime) / _frameDuration;
