@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ecosnail::tempo {
+namespace tempo {
 
 class Metronome {
 public:
@@ -14,4 +14,4 @@ private:
     double _offset;
 };
 
-} // namespace ecosnail::tempo
+} // namespace tempo

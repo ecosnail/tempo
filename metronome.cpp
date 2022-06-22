@@ -1,8 +1,8 @@
-#include <ecosnail/tempo/metronome.hpp>
+#include <tempo/metronome.hpp>
 
 #include <cmath>
 
-namespace ecosnail::tempo {
+namespace tempo {
 
 Metronome::Metronome(int fps)
 {
@@ -23,4 +23,4 @@ int Metronome::ticks(double delta)
     return ticks;
 }
 
-} // namespace ecosnail::tempo
+} // namespace tempo

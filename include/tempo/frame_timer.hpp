@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-namespace ecosnail::tempo {
+namespace tempo {
 
 class FrameTimer {
 public:
@@ -19,4 +19,4 @@ private:
     Clock::duration _frameDuration;
 };
 
-} // namespace ecosnail::tempo
+} // namespace tempo

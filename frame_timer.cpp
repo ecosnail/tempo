@@ -1,6 +1,6 @@
-#include <ecosnail/tempo/frame_timer.hpp>
+#include <tempo/frame_timer.hpp>
 
-namespace ecosnail::tempo {
+namespace tempo {
 
 FrameTimer::FrameTimer(int fps)
     : _delta(1.0 / fps)
@@ -24,4 +24,4 @@ int FrameTimer::operator()()
     return static_cast<int>(frameDiff);
 }
 
-} // namespace ecosnail::tempo
+} // namespace tempo
