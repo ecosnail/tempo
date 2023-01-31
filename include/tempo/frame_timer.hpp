@@ -7,8 +7,9 @@ namespace tempo {
 class FrameTimer {
 public:
     explicit FrameTimer(int fps);
-    double delta() const;
+    [[nodiscard]] double delta() const;
     int operator()();
+    void relax() const;
 
 private:
     using Clock = std::chrono::high_resolution_clock;

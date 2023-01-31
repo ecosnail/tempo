@@ -1,5 +1,7 @@
 #include <tempo/frame_timer.hpp>
 
+#include <thread>
+
 namespace tempo {
 
 FrameTimer::FrameTimer(int fps)
@@ -22,6 +24,12 @@ int FrameTimer::operator()()
     auto frameDiff = currentFrame - _lastFrame;
     _lastFrame = currentFrame;
     return static_cast<int>(frameDiff);
+}
+
+void FrameTimer::relax() const
+{
+    auto nextFrameTime = _startTime + (_lastFrame + 1) * _frameDuration;
+    std::this_thread::sleep_until(nextFrameTime);
 }
 
 } // namespace tempo
