@@ -10,8 +10,8 @@ public:
     int ticks(double delta);
 
 private:
-    double _period;
-    double _offset;
+    double _period = 0.0;
+    double _offset = 0.0;
 };
 
 } // namespace tempo
