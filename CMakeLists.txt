@@ -8,3 +8,4 @@ add_library (tempo
 )
 
 target_include_directories (tempo PUBLIC include)
+set_target_properties (tempo PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
